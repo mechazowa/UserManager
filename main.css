@@ -1,0 +1,155 @@
+:root {
+	--midnight50: #5B70FF;
+	--midnight100: #1D1C2F;
+	--dandelion: #6D64FF;
+	--sea: #6D64FF;
+	--mint: #60EDCE;
+	--sunset: #FF595A;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "New Hero", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+}
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 300;
+	color: var(--midnight100);
+	margin-bottom: 1rem;
+}
+
+#new-user-form {
+	display: flex;;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-user-input {
+	flex: 1 1 0%;
+	background-color: var(--midnight50);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: var(--midnight100);
+	font-size: 1.25rem;
+}
+
+#new-user-input::placeholder {
+	color: #FFF;
+}
+
+#new-user-submit {
+	color: var(--mint);
+	font-size: 1.25rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, var(--sunset), var(--midnight50));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+#new-user-submit:hover {
+	opacity: 0.8;
+}
+
+#new-user-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.user-list {
+	padding: 1rem;
+}
+
+.user-list h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--midnight100);
+	margin-bottom: 1rem;
+}
+
+#user .user {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--midnight50);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.user .content {
+	flex: 1 1 0%;
+}
+
+.user .content .text {
+	background-color: var(--midnight50);
+	font-size: 1.125rem;
+	color: #fff;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.user .content .text:not(:read-only) {
+	color: var(--mint);
+}
+
+.user .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.user .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.user .actions button:hover {
+	opacity: 0.8;
+}
+
+.user .actions button:active {
+	opacity: 0.6;
+}
+
+.user .actions .edit {
+	background-image: linear-gradient(to right, var(--mint), var(--midnight50));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.user .actions .delete {
+	color: var(--sunset);
+}
