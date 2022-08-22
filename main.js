@@ -52,6 +52,10 @@ window.addEventListener('load', () => {
 
 		input.value = '';
 
+		/*if (list_el === user.value) {
+      alert('The name already exist')*/
+    }
+
 		user_edit_el.addEventListener('click', (e) => {
 			if (user_edit_el.innerText.toLowerCase() == "edit") {
 				user_edit_el.innerText = "Save";
