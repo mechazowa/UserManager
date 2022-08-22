@@ -6,10 +6,15 @@ window.addEventListener('load', () => {
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 
+		const emailInput = document.getElementById('new-user-input');
+		const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+		if (!emailInput.value.match(emailRegex)) 
+		{
+			alert('Invalid email address.');
+			user_el.classList.remove(emailInput);
+		}
+
 		const user = input.value;
-		//code below was an attempt to stop duplicate code but stopped the capture when submit was pushed by user
-		/*if (user_el.classList.indexOf(user) === -1) 
-		array.push(user);*/
 
 		const user_el = document.createElement('div');
 		user_el.classList.add('user');
