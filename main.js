@@ -7,6 +7,9 @@ window.addEventListener('load', () => {
 		e.preventDefault();
 
 		const user = input.value;
+		//code below was an attempt to stop duplicate code but stopped the capture when submit was pushed by user
+		/*if (user_el.classList.indexOf(user) === -1) 
+		array.push(user);*/
 
 		const user_el = document.createElement('div');
 		user_el.classList.add('user');
